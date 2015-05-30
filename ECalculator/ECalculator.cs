@@ -51,17 +51,15 @@ namespace ECalculator
 
             if (!quietMode)
             {
-                Console.WriteLine("Thread number: " + thread_number + "\nThread execution result: " + result + "\n");
+                Console.WriteLine("\nThread number: " + thread_number + "\nThread execution result: " + result + "\nThread " + thread_number + " : " + watch.ElapsedMilliseconds);
 
                 if (!string.IsNullOrEmpty(outputPath))
                 {
-                    Program.writeToFile("Thread number: " + thread_number + "\nThread execution result: " + result + "\n");
+                    Program.writeToFile("Thread number: " + thread_number + "\nThread execution result: " + result + "\nThread " + thread_number + " : " + watch.ElapsedMilliseconds);
                 }
             }
 
             results.Add(result);
-
-            Console.WriteLine("Thread " + thread_number + " : " + watch.ElapsedMilliseconds );
         }
 
         public static BigDecimal factorial(int number)

@@ -30,7 +30,7 @@ namespace ECalculator
 
         private static bool validateInputArguments(String[] args)
         {
-            for (int i = 0; i < args.Length - 1; i += 2)
+            for (int i = 0; i < args.Length; i += 2)
             {
                 switch (args[i])
                 { 
